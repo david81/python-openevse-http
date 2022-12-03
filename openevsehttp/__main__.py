@@ -732,7 +732,7 @@ class OpenEVSE:
         Return the energy usage in Wh.
         """
         assert self._status is not None
-        return float(round(self._status["wattsec"] / 3600, 2))
+        return float(round(self._status["session_energy"], 2))
 
     @property
     def protocol_version(self) -> str | None:
